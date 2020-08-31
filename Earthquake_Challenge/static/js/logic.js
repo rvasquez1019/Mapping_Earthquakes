@@ -17,7 +17,7 @@ attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap
 });
 
 // We create the blueprint view tile layer that will be an option for our map.
-let blueprint = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/light-v10.html?title=true&access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4M29iazA2Z2gycXA4N2pmbDZmangifQ.-g_vE53SD2WrJ6tFX7QHmA#1.07/0/0', {
+let light = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/{z}/{x}/{y}?access_token={accessToken}', {
 attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery (c) <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
     accessToken: API_KEY 
@@ -27,7 +27,7 @@ attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap
 let baseMaps = {
 	    "Streets": streets,
         "Satellite": satelliteStreets,
-        "Blueprint": blueprint
+        "Light": light
 	
 };
 
